@@ -1,20 +1,29 @@
 :root{
 
 --teal:#005b73;
+
 --orange:#f79400;
 
 }
+
+
+*{
+
+box-sizing:border-box;
+
+}
+
 
 
 body{
 
 margin:0;
 
-font-family:Arial, sans-serif;
-
-color:#333;
+font-family:Arial,sans-serif;
 
 line-height:1.7;
+
+color:#333;
 
 }
 
@@ -23,9 +32,13 @@ line-height:1.7;
 
 header{
 
+position:sticky;
+
+top:0;
+
 background:white;
 
-padding:15px 8%;
+z-index:1000;
 
 box-shadow:0 2px 10px #ddd;
 
@@ -33,7 +46,7 @@ box-shadow:0 2px 10px #ddd;
 
 
 
-.nav{
+nav{
 
 display:flex;
 
@@ -41,7 +54,10 @@ justify-content:space-between;
 
 align-items:center;
 
+padding:15px 8%;
+
 }
+
 
 
 
@@ -51,7 +67,9 @@ display:flex;
 
 align-items:center;
 
-gap:15px;
+gap:12px;
+
+text-decoration:none;
 
 }
 
@@ -59,10 +77,9 @@ gap:15px;
 
 .logo img{
 
-width:80px;
+width:75px;
 
 }
-
 
 
 .logo h2{
@@ -76,11 +93,11 @@ color:var(--teal);
 
 .menu a{
 
-color:var(--teal);
+margin:10px;
 
 text-decoration:none;
 
-margin:15px;
+color:var(--teal);
 
 font-weight:bold;
 
@@ -88,9 +105,39 @@ font-weight:bold;
 
 
 
+.support{
+
+background:var(--orange);
+
+color:white!important;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+}
+
+
+
+.hamburger{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
 
 .hero{
 
+
+height:520px;
 
 background:
 
@@ -99,14 +146,12 @@ rgba(0,91,115,.75),
 rgba(0,91,115,.75)
 ),
 
-url("images/banner.jpg");
+url("images/banner1.jpg");
 
 
 background-size:cover;
 
 background-position:center;
-
-height:500px;
 
 
 display:flex;
@@ -121,7 +166,6 @@ align-items:center;
 text-align:center;
 
 color:white;
-
 
 }
 
@@ -140,55 +184,24 @@ display:none;
 
 display:block;
 
-animation:fade 1.5s;
-
 }
 
-
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-
-
-.hero h1{
-
-font-size:50px;
-
-}
 
 
 
 .button{
 
-
 background:var(--orange);
-
-color:white;
 
 padding:14px 30px;
 
 border-radius:30px;
 
+color:white;
+
 text-decoration:none;
 
-font-weight:bold;
-
 }
-
 
 
 
@@ -212,7 +225,7 @@ font-size:35px;
 
 
 
-#about{
+.light{
 
 background:#f7faf9;
 
@@ -220,20 +233,17 @@ background:#f7faf9;
 
 
 
-
-
 .cards{
 
 display:flex;
-
-flex-wrap:wrap;
 
 justify-content:center;
 
 gap:25px;
 
-}
+flex-wrap:wrap;
 
+}
 
 
 
@@ -245,11 +255,9 @@ padding:20px;
 
 background:white;
 
-border-radius:15px;
-
 box-shadow:0 5px 15px #ddd;
 
-border-top:5px solid var(--orange);
+border-radius:15px;
 
 }
 
@@ -263,19 +271,7 @@ height:160px;
 
 object-fit:cover;
 
-border-radius:10px;
-
 }
-
-
-
-.card h3{
-
-color:var(--teal);
-
-}
-
-
 
 
 
@@ -286,6 +282,7 @@ background:var(--teal);
 color:white;
 
 }
+
 
 
 .verse h2{
@@ -311,21 +308,33 @@ padding:20px;
 
 
 
+
 @media(max-width:700px){
 
 
-.nav{
+.menu{
+
+display:none;
 
 flex-direction:column;
 
 }
 
 
-.hero h1{
+.menu.show{
 
-font-size:32px;
+display:flex;
 
 }
+
+
+
+.hamburger{
+
+display:block;
+
+}
+
 
 
 }
