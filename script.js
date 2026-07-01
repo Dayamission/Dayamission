@@ -1,6 +1,11 @@
+// Banner slider
+
 let slides=document.querySelectorAll(".slide");
 
 let current=0;
+
+
+if(slides.length>0){
 
 
 setInterval(()=>{
@@ -25,12 +30,19 @@ slides[current].classList.add("active");
 },5000);
 
 
+}
 
+
+
+// Mobile menu
 
 
 function openMenu(){
 
-document.getElementById("menu")
-.classList.toggle("show");
+let menu=document.getElementById("menu");
+
+
+menu.classList.toggle("show");
+
 
 }
