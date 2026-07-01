@@ -1,8 +1,11 @@
-let slides=document.querySelectorAll(".slide");
+// Banner slider
 
-let hero=document.getElementById("hero");
+let slides = document.querySelectorAll(".slide");
 
-let images=[
+let hero = document.getElementById("hero");
+
+
+let images = [
 
 "images/banner.jpg",
 
@@ -13,7 +16,11 @@ let images=[
 ];
 
 
-let current=0;
+let current = 0;
+
+
+
+if(slides.length > 0){
 
 
 setInterval(()=>{
@@ -25,21 +32,39 @@ slides[current].classList.remove("active");
 current++;
 
 
-if(current>=slides.length){
+if(current >= slides.length){
 
-current=0;
+current = 0;
 
 }
+
 
 
 slides[current].classList.add("active");
 
 
 
-hero.style.backgroundImage=
+hero.style.backgroundImage =
 
-"linear-gradient(rgba(0,91,115,.75),rgba(0,91,115,.75)),url("+images[current]+")";
+"linear-gradient(rgba(0,91,115,.35),rgba(0,91,115,.35)),url('" 
++ images[current] + "')";
 
 
 
 },5000);
+
+
+}
+
+
+
+
+// Mobile menu
+
+function openMenu(){
+
+let menu = document.getElementById("menu");
+
+menu.classList.toggle("show");
+
+}
