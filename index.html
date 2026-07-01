@@ -48,22 +48,49 @@
 
 <section class="hero">
 
+<div class="slide active">
 
-<h1>
-Steadfast Love Never Ceases
-</h1>
-
+<h1>Steadfast Love Never Ceases</h1>
 
 <p>
-
 "The steadfast love of the Lord never ceases;
 His mercies never come to an end."
-
 <br>
-
 Lamentations 3:22
-
 </p>
+
+</div>
+
+
+
+<div class="slide">
+
+<h1>Go Into All The World</h1>
+
+<p>
+"Go into all the world and preach the gospel to all creation."
+<br>
+Mark 16:15
+</p>
+
+</div>
+
+
+
+
+<div class="slide">
+
+<h1>Faith Hope And Love</h1>
+
+<p>
+"And now these three remain: faith, hope and love.
+But the greatest of these is love."
+<br>
+1 Corinthians 13:13
+</p>
+
+</div>
+
 
 
 <a class="button" href="#contact">
@@ -272,7 +299,37 @@ Contact Us
 
 </footer>
 
+<script>
 
+let slides=document.querySelectorAll(".slide");
+
+let current=0;
+
+
+function changeSlide(){
+
+slides[current].classList.remove("active");
+
+
+current++;
+
+if(current>=slides.length){
+
+current=0;
+
+}
+
+
+slides[current].classList.add("active");
+
+
+}
+
+
+setInterval(changeSlide,5000);
+
+
+</script>
 
 </body>
 
