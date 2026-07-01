@@ -383,3 +383,34 @@ padding:10px;
 
 
 }
+.brand{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+.brand h2{
+
+margin:0;
+
+color:#005b73;
+
+font-size:38px;
+
+}
+
+
+.brand span{
+
+color:#f79400;
+
+font-size:16px;
+
+font-style:italic;
+
+margin-top:5px;
+
+}
