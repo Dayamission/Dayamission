@@ -101,10 +101,10 @@ rgba(0,91,115,.75)
 
 url("images/banner.jpg");
 
+
 background-size:cover;
 
 background-position:center;
-
 
 height:500px;
 
@@ -122,7 +122,43 @@ text-align:center;
 
 color:white;
 
-padding:20px;
+
+}
+
+
+
+
+.slide{
+
+display:none;
+
+}
+
+
+
+.slide.active{
+
+display:block;
+
+animation:fade 1.5s;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
 
 }
 
